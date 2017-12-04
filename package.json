@@ -1,0 +1,23 @@
+{
+  "name": "cicero-perishable-network",
+  "version": "0.0.2",
+  "description": "Track shipments and invoke a Cicero Smart Clause",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "Accord Project",
+  "email": "dan@accordproject.io",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "chai": "latest",
+    "composer-admin": "latest",
+    "composer-client": "latest",
+    "composer-common": "latest",
+    "composer-connector-embedded": "latest",
+    "eslint": "latest",
+    "istanbul": "latest",
+    "mkdirp": "latest",
+    "mocha": "latest",
+    "sinon": "^4.1.2"
+  }
+}
