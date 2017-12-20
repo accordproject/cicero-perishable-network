@@ -7,6 +7,9 @@ Externalizing the contract logic from the chaincode ensures that the logic is bo
 The Cicero contract is at:
 https://github.com/accordproject/cicero-template-library/tree/master/perishable-goods
 
+You can view a video of the install and run process (no audio) here:
+https://drive.google.com/file/d/1EzPFLEQMGBTJQ5SBA5UoDhlDZ1x0NGHh/
+
 ## Download the Cicero Template Library
 
 Change directory to a suitable directory to hold the Cicero template library.
