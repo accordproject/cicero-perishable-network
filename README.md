@@ -30,27 +30,34 @@ The server should start and display: `Server listening on port:  6001`
 
 ## Installing Hyperleger Composer and Fabric
 
-You need to have Hyperledger Composer installed and running locally (Mac OS X, Linux or a VM running Linux). The easiest route is to use the "one-line installer" available here: https://hyperledger.github.io/composer/installing/using-playground-locally.html
+You need to have Hyperledger Composer installed and running locally (Mac OS X, Linux or a VM running Linux). Follow the instructions for installing a development environment here: https://hyperledger.github.io/composer/installing/development-tools.html
 
-After you have piped the `curl` command to `bash`, you should be able to type:
+Start Fabric using the `./startFabric.sh` script.
 
 ```
 docker ps
 ```
 
-And see:
+You should see:
 
 ```
 Daniels-MBP:~ dselman$ docker ps
 CONTAINER ID        IMAGE                                     COMMAND                  CREATED             STATUS              PORTS                                            NAMES
-04e3b3404e4c        hyperledger/composer-playground           "pm2-docker compos..."   12 seconds ago      Up 21 seconds       0.0.0.0:8080->8080/tcp                           composer
-e7501005bc00        hyperledger/fabric-peer:x86_64-1.0.4      "peer node start -..."   55 seconds ago      Up About a minute   0.0.0.0:7051->7051/tcp, 0.0.0.0:7053->7053/tcp   peer0.org1.example.com
-e5f56f4fb652        hyperledger/fabric-orderer:x86_64-1.0.4   "orderer"                57 seconds ago      Up About a minute   0.0.0.0:7050->7050/tcp                           orderer.example.com
-b97030b05dab        hyperledger/fabric-ca:x86_64-1.0.4        "sh -c 'fabric-ca-..."   57 seconds ago      Up About a minute   0.0.0.0:7054->7054/tcp                           ca.org1.example.com
-98decaa54639        hyperledger/fabric-couchdb:x86_64-1.0.4   "tini -- /docker-e..."   57 seconds ago      Up About a minute   4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp       couchdb
+e84c97d2104a        hyperledger/fabric-peer:x86_64-1.0.4      "peer node start --p…"   3 minutes ago       Up 3 minutes        0.0.0.0:7051->7051/tcp, 0.0.0.0:7053->7053/tcp   peer0.org1.example.com
+afee051fc219        hyperledger/fabric-couchdb:x86_64-1.0.4   "tini -- /docker-ent…"   3 minutes ago       Up 3 minutes        4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp       couchdb
+23a976026ff1        hyperledger/fabric-orderer:x86_64-1.0.4   "orderer"                3 minutes ago       Up 3 minutes        0.0.0.0:7050->7050/tcp                           orderer.example.com
+bcab5afe3633        hyperledger/fabric-ca:x86_64-1.0.4        "sh -c 'fabric-ca-se…"   3 minutes ago       Up 3 minutes        0.0.0.0:7054->7054/tcp                           ca.org1.example.com
 ```
 
-The installer should open your web-browser and you will see the Hyperledger Composer Playground.
+## Start Playground
+
+If you have followed the install instructions you should now be able to start the Composer Playground using:
+
+```
+composer-playground
+```
+
+This will open a web browser and display the Playground user interface.
 
 ## Install Composer CLI
 
@@ -76,7 +83,7 @@ From the parent directory you can then create the BNA:
 composer archive create -t dir -n ./cicero-perishable-network
 ```
 
-You should see a file like `cicero-perishable-network@0.0.2.bna` created from the contents of the `cicero-perishable-network` directory.
+You should see a file like `cicero-perishable-network@0.1.0.bna` created from the contents of the `cicero-perishable-network` directory.
 
 ## Deploy the Business Network Archive using Playground
 
@@ -135,14 +142,15 @@ You should now see that a test Grower, Importer, Shipper and Shipment have been 
 
 ### Submit Temperature Readings
 
-Submit a temperature reading for the shipment:
+Submit a sensor reading for the shipment:
 
 E.g.
 
 ```
 {
-  "$class": "org.accordproject.perishablegoods.TemperatureReading",
+  "$class": "org.accordproject.perishablegoods.SensorReading",
   "centigrade": 2,
+  "humidity" : 75,
   "shipment": "resource:org.accordproject.perishablegoods.Shipment#SHIP_001"
 }
 ```
