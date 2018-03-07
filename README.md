@@ -110,7 +110,7 @@ Press the "Connect Now" button at the bottom of the admin@cicero-perishable-netw
 
 To allow the docker container running your Composer transaction processor function to call the cicero-server (running outside Docker) you need to update the script to use the physical IP address of your local machine.
 
-Open the Script file logic.js and change localhost to your local machine's IP address. E.g.
+In the Playground web application open the Script file logic.js and change localhost to your local machine's IP address. E.g.
 
 ```
 var server = 'http://10.68.107.24:6001';
@@ -134,7 +134,7 @@ Press the Test tab at the top of the screen.
 
 Press the submit transaction button on the left.
 
-Select the Setup Demo transaction type.
+Select the `SetupDemo` transaction type.
 
 Press the Submit button.
 
