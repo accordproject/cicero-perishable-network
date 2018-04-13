@@ -22,7 +22,7 @@ export CICERO_DIR=<PATH WHERE YOU JUST CLONED THE CICERO TEMPLATE LIBRARY ABOVE>
 ## Install and Start the Cicero Server
 
 ```
-npm install -g cicero-server
+npm install -g @accordproject/cicero-server
 cicero-server
 ```
 
@@ -30,7 +30,7 @@ The server should start and display: `Server listening on port:  6001`
 
 ## Installing Hyperleger Composer and Fabric
 
-You need to have Hyperledger Composer installed and running locally (Mac OS X, Linux or a VM running Linux). Follow the instructions for installing a development environment here: https://hyperledger.github.io/composer/installing/development-tools.html
+You need to have Hyperledger Composer installed and running locally (Mac OS X, Linux or a VM running Linux). Follow the instructions for installing a development environment here: https://hyperledger.github.io/composer/latest/installing/development-tools.html
 
 Start Fabric using the `./startFabric.sh` script.
 
