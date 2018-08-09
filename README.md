@@ -16,7 +16,7 @@ Change directory to a suitable directory to hold the Cicero template library.
 
 ```
 git clone https://github.com/accordproject/cicero-template-library.git
-export CICERO_DIR=<PATH WHERE YOU JUST CLONED THE CICERO TEMPLATE LIBRARY ABOVE>
+export CICERO_DIR=<PATH WHERE YOU JUST CLONED THE CICERO TEMPLATE LIBRARY ABOVE>/src
 ```
 
 ## Install and Start the Cicero Server
