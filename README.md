@@ -5,7 +5,7 @@ This is a version of the Composer `perishable-network` where the details of smar
 Externalizing the contract logic from the chaincode ensures that the logic is bound to legally-enforceable natural language text.
 
 The Cicero contract is at:
-https://github.com/accordproject/cicero-template-library/tree/master/perishable-goods
+https://github.com/accordproject/cicero-template-library/tree/master/src/perishable-goods
 
 You can view a video of the install and run process (no audio) here:
 https://drive.google.com/file/d/1EzPFLEQMGBTJQ5SBA5UoDhlDZ1x0NGHh/
