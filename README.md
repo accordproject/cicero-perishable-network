@@ -2,7 +2,7 @@
 
 This is a version of the Composer `perishable-network` where the details of smart contract execution have been externalized to an external [Cicero](http://cicero-docs.readthedocs.io/en/latest/) engine, invoked via an HTTP POST.
 
-Externalizing the contract logic from the chaincode ensures that the logic is bound to legally-enforceable natural language text.
+Externalizing the contract logic from the chain code ensures that the logic is bound to legally-enforceable natural language text.
 
 The Cicero contract is at:
 https://github.com/accordproject/cicero-template-library/tree/master/src/perishable-goods
@@ -69,7 +69,7 @@ npm install -g composer-cli
 
 ## Building and Installing the Cicero Perishable Network
 
-Next, we need to create a Business Network Archive (BNA) for the cicero-peristable-network project.
+Next, we need to create a Business Network Archive (BNA) for the cicero-perishable-network project.
 
 Open a terminal and in a suitable directory type:
 
@@ -87,7 +87,7 @@ You should see a file like `cicero-perishable-network@0.1.0.bna` created from th
 
 ## Deploy the Business Network Archive using Playground
 
-Open http://localhost:8080 with your web-browser.
+Open http://localhost:8080 with your web browser.
 
 Under the `Connection hlfv1` heading, press the "Deploy a new Business Network" rectangle.
 
