@@ -9,7 +9,7 @@
   "email": "dan@accordproject.io",
   "license": "Apache-2.0",
   "devDependencies": {
-    "async": "^2.6.0",
+    "async": "^2.6.4",
     "chai": "latest",
     "composer-admin": "latest",
     "composer-client": "latest",
