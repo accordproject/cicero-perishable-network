@@ -15,7 +15,7 @@
     "composer-client": "latest",
     "composer-common": "latest",
     "composer-connector-embedded": "latest",
-    "csv-parse": "^2.0.0",
+    "csv-parse": "^6.2.1",
     "eslint": "latest",
     "excel-as-json": "^2.0.1",
     "istanbul": "latest",
